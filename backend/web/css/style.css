@@ -1,0 +1,30 @@
+html,
+body {
+    font-family: ptsanssrv !important;
+}
+
+#header {
+    height: 56px !important;
+}
+
+.fixed-navbar #wrapper {
+    top: 56px !important;
+}
+
+#logo {
+    font-size: 20px !important;
+}
+
+.select2-container--bootstrap .select2-selection {
+    font-family: ptsanssrv !important;
+}
+
+/* ссылки с подчеркиванием */
+a.link-ajax {
+    text-decoration: none;
+    border-bottom: 1px dashed #000080;
+}
+
+a.link-ajax:hover {
+    color: #f00000;
+}
