@@ -20,6 +20,7 @@ return [
             'enableRegistration' => false,
             'enableConfirmation' => false,
             'enablePasswordRecovery' => false,
+            'enableFlashMessages' => false,
             'modelMap' => [
                 //'User' => 'backend\models\User',
                 //'UserSearch' => 'backend\models\UserSearch',

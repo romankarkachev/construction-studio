@@ -21,8 +21,6 @@ if ($model->avatar_fn != null && $model->avatar_fn != '')
         }
 ?>
 
-<?= $this->render('/_alert', ['module' => Yii::$app->getModule('user')]) ?>
-
 <div class="row">
     <div class="col-md-3">
         <?= $this->render('_menu') ?>
