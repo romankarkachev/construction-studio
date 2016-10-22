@@ -42,7 +42,6 @@ class SettingsController extends BaseSettingsController
             $model->avatar_fn = $avatar_fn;
             $model->avatar_tffp = $thumb_ffp;
             $model->avatar_tfn = $thumb_fn;
-            $model->avatar_size = filesize($avatar_ffp);
 
             // сохраняем основное изображение
             $file->saveAs($avatar_ffp);
@@ -50,6 +49,9 @@ class SettingsController extends BaseSettingsController
             Image::thumbnail($avatar_ffp, 800, 600)->save($avatar_ffp, ['quality' => 100]);
             // делаем thumbnail
             Image::thumbnail($avatar_ffp, 128, 128)->save($thumb_ffp, ['quality' => 100]);
+
+            $model->avatar_size = filesize($avatar_ffp);
+
             if ($model->save()) {
                 \Yii::$app->getSession()->setFlash('success', \Yii::t('user', 'Your profile has been updated'));
                 $this->trigger(self::EVENT_AFTER_PROFILE_UPDATE, $event);
