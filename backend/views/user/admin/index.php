@@ -1,18 +1,8 @@
 <?php
 
-/*
- * This file is part of the Dektrium project.
- *
- * (c) Dektrium project <http://github.com/dektrium>
- *
- * For the full copyright and license information, please view the LICENSE.md
- * file that was distributed with this source code.
- */
-
 use yii\data\ActiveDataProvider;
 use yii\grid\GridView;
 use yii\helpers\Html;
-use yii\jui\DatePicker;
 use yii\web\View;
 use yii\widgets\Pjax;
 use dektrium\user\models\UserSearch;
@@ -24,7 +14,7 @@ use dektrium\user\models\UserSearch;
  */
 
 $this->title = Yii::t('user', 'Manage users').' | '.Yii::$app->name;
-$this->params['breadcrumbs'][] = $this->title;
+$this->params['breadcrumbs'][] = 'Пользователи';
 
 $this->params['content-block'] = 'Пользователи';
 $this->params['content-additional'] = 'Создание, удаление пользователей, а также изменение информации о них, установка паролей, блокировка.';
@@ -70,14 +60,6 @@ $this->params['content-additional'] = 'Создание, удаление пол
                     return date('Y-m-d G:i:s', $model->created_at);
                 }
             },
-            'filter' => DatePicker::widget([
-                'model'      => $searchModel,
-                'attribute'  => 'created_at',
-                'dateFormat' => 'php:Y-m-d',
-                'options' => [
-                    'class' => 'form-control',
-                ],
-            ]),
         ],
         [
             'header' => Yii::t('user', 'Confirmation'),
