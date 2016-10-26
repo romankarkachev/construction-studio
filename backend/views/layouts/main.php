@@ -70,6 +70,8 @@ else
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
+    <?= $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/png', 'href' => '/favicon.png']) ?>
+    <?= $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/ico', 'href' => '/favicon.ico']) ?>
     <?php $this->head() ?>
 </head>
 <body class="<?= Yii::$app->user->isGuest ? 'blank' : 'fixed-navbar' ?>">

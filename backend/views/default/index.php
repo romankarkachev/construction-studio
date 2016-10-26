@@ -3,9 +3,13 @@
 /* @var $this yii\web\View */
 
 $this->title = 'Рабочий стол | '.Yii::$app->name;
+
+$this->params['content-block'] = 'Приветствие';
+$this->params['content-additional'] = 'Добро пожаловать в учетную систему.';
 ?>
 <div class="dashboard">
-    <div class="hpanel">
+    <p>Добро пожаловать! В меню слева выберите интересующий раздел.</p>
+    <div class="hpanel collapse">
         <div class="panel-body">
             <div class="table-responsive">
                 <table cellpadding="1" cellspacing="1" class="table">
